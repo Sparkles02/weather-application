@@ -28,3 +28,22 @@ footer {
   font-size: 15px;
   color: rgba(0, 0, 0, 0.8);
 }
+
+.search-form-input {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  font-size: 15px;
+  padding: 15px 20px;
+}
+
+.search-form-button {
+  background-color: #885df1;
+  padding: 15px 30px;
+  border: none;
+  font-size: 15px;
+  margin-left: 5px;
+  border-radius: 5px;
+  color: #ffffff;
+}
