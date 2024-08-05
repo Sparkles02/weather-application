@@ -1,25 +1,13 @@
-function refresh(response) {}
+function refresh(response) {
+    let temperatureElement = document.querySelector("#temperature");
+    let temperature = response.data.temperature.current;
+    let cityElement = document.querySelector("#city");
 
-function formatDate(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[date.getDay()];
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  return `${day} ${hours}:${minutes}`;
+    cityElement.innerHTML = response.data.city;
+    temperatureElement.innerHTML = Math.round(temperature);
 }
+
+
 
 function searchCity(city) {
   let apiKey = "60o33fb20b2774044706tc81f87a3c87";
@@ -37,5 +25,3 @@ function searchSubmit(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmit);
-
-

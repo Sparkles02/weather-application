@@ -8,6 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather Application</title>
   </head>
   <body>
@@ -28,7 +29,7 @@
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-app-city" id="city">Paris</h1>
+            <h1 class="weather-app-city" id="city"></h1>
             <p class="weather-app-details">
               <span id="time"></span>
               <span id="description"></span>
@@ -38,8 +39,8 @@
             </p>
           </div>
           <div class="weather-app-temperature-container">
-            <div id="icon">☀️</div>
-            <div class="weather-app-temperature" id="temperature">25</div>
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="temperature"></div>
             <div class="weather-app-unit">°C</div>
           </div>
         </div>
